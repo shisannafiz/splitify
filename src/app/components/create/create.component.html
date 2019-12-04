@@ -1,0 +1,28 @@
+<div class="bg">
+	<div class="container bg">
+		<div class="row center">
+				<div class="col-12 headline">
+					<div class="row">
+						<h1 class="col-7">Create playlists to split into</h1>
+						<button *ngIf="count" class="continue btn btn-primary col-3" (click)="setCount()" routerLink="/start">Continue</button>
+					</div>
+				</div>
+			</div>
+		<div class="row center" style="margin: 15px 0"> 
+      <div class="col-3">
+          <input [(ngModel)]="name" type="text" class="form-control" name="name" placeholder="Enter a name.." style="width: 100%">
+      </div>
+      <div class="col-1 center">
+        <button (click)='createPlaylist()' class="btn btn-light add"><i class="material-icons icon center">add</i>
+        </button>
+      </div>
+		</div>
+		<div class="row center"> 
+			<div *ngFor="let playlist of playlists">
+				<div class="col-12 center">
+					<button (click)="getPlaylistID($click, playlist.id, playlist.name)" class="playlist btn btn-secondary">{{playlist.name}}</button>
+				</div>
+			</div>
+    </div>
+	</div>
+</div>

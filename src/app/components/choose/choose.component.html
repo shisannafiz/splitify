@@ -1,0 +1,19 @@
+<div class="bg">
+	<div class="container bg">
+		<div class="row center">
+			<div class="col-12 headline">
+				<div class="row">
+					<h1 class="col-7">Choose playlists to split into</h1>
+					<button *ngIf="playlistID" class="continue btn btn-primary col-3" (click)="setPlaylistIDs()" routerLink="/start">Continue</button>
+				</div>
+			</div>
+		</div>
+		<div class="row center"> 
+			<div *ngFor="let playlist of playlists">
+				<div class="col-12 center">
+					<button (click)="addPlaylistID($click, playlist.id)" class="playlist btn btn-secondary">{{playlist.name}}</button>
+				</div>
+			</div>
+		</div>
+	</div> 
+</div>

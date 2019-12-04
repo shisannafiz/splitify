@@ -1,0 +1,33 @@
+<div class="bg"> 
+	<div class="container">
+		<div class="row center">
+			<div class="col-md-6 left">
+				<h1>Split</h1>
+			</div>
+			<div class="col-md-6 right"> 
+				<button type="button" class="playlist btn btn-secondary">{{master}}</button>        
+			</div>
+		</div>
+		<br>
+		<hr class="center">
+		<br>
+		<div class="row center">
+			<div class="col-md-6 left">
+					<h1>into</h1>
+			</div>
+			<div class="col-md-6 right">
+				<div *ngFor="let playlist of playlists">
+						<button class="playlist btn btn-secondary">{{playlist.name}}</button>
+				</div> 
+			</div>
+		</div>
+		<div class="row center">
+				<div class="col-12 headline">
+					<div class="row center">
+						<button class="start btn btn-primary col-3" routerLink="/home">Start</button>
+					</div>
+				</div>
+			</div>
+		<br>
+  </div>
+</div>

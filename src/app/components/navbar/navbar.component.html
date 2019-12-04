@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg">
+  <i class="material-icons">layers</i>
+  <a class="navbar-brand name" routerLink="/">Splitify</a> 
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item font">
+        <a class="nav-link font" routerLink="/select" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Select</a>
+      </li>
+      <li class="nav-item font">
+        <a class="nav-link font" routerLink="/create" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Create</a>
+      </li>
+      <li class="nav-item font">
+        <a class="nav-link font" routerLink="/choose" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Choose</a>
+      </li>
+      <li class="nav-item font">
+        <a class="nav-link font" routerLink="/start" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Start</a>
+      </li>
+      <li class="nav-item font">
+          <a class="nav-link font" routerLink="/login" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Login</a>
+        </li>
+    </ul>
+  </div>
+</nav>
+

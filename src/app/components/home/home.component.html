@@ -1,0 +1,45 @@
+<div class="center">
+  <div class="row">
+    <div class="col-md-8 player">
+      <div class="row information center">
+        <div class="col-md-6 right">
+          <div class="media" style="padding-top: 10px; width:fit-content">
+            <img src={{cover}} alt="ALBUM COVER">
+          </div>
+        </div>
+        <div class="col-md-6 left" style="width: 100%">
+          <h4>{{title}}</h4>
+          <h5>{{artist}}</h5>
+          <h5>{{album}}</h5>
+        </div>
+      </div>
+      <div class="row controls">
+        <div class="col-3 center lefticons">
+          <i class="material-icons icon" (click)="replay()" style="padding-bottom: 10px;" >replay</i>
+          <i class="material-icons icon" (click)="play()">play_arrow</i>
+          <i class="material-icons icon" (click)="pause()">pause</i>
+        </div>
+        <div class="col-7 seeker">
+          <div class="progress" style="height: 28px; margin-top: -5px">
+            <div class="progress-bar progress-bar-striped progress-bar-animated accent" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{width: timer + '%'}" style="height: 500px"> 
+            </div>
+          </div>
+        </div>
+        <div class="col-2 center righticons">
+          <a><i class="material-icons icon" (click)="next()">fast_forward</i></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 playlists scrollable">
+      <h3 class="col-12">Playlists</h3>
+      <div class="scollable">
+        <div *ngFor="let playlist of playlists">
+          <div class="col-12 center">
+            <button class="btn btn-secondary playlist accent" (click)="add($click, playlist.id, uri)">{{playlist.name}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

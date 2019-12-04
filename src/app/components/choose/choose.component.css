@@ -1,0 +1,44 @@
+.bg {
+    background-color: #2e3238;
+}
+
+.container {    
+    padding: 20px 0;
+ }
+ 
+ .headline {
+     margin: 50px 0;
+     font-family: 'IBM Plex Sans Condensed', sans-serif;
+ }
+ 
+ .continue {
+     width: 100%; 
+     font-size: 20px; 
+     padding: 5px 0;
+     background-color: #414d5e;
+     border-color: #37414f;
+ }
+ 
+ .btn-primary:hover {
+     background-color: #37414f !important;
+ }
+ 
+ .playlist {
+     width: 320px; 
+     font-size: 20px; 
+     margin: 15px 0;
+     background-color: #719192;
+     border-color: #445959;
+ }
+ 
+ .btn-secondary:hover {
+     background-color: #445959 !important;
+ }
+ 
+ .center {
+     text-align: center;
+     align-items: center; 
+     justify-content: center;
+ }
+ 
+ 

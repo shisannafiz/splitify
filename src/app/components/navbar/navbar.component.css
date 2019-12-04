@@ -1,0 +1,18 @@
+.bg {
+    background-color: #222831;
+}
+
+.font {
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+
+i {
+    font-size: 45px;
+}
+
+.name {
+    font-size: 35px; 
+    padding-left: 15px; 
+    font-weight: 200; 
+    font-family: 'IBM Plex Sans', sans-serif;
+}
