@@ -1,58 +1,86 @@
-.container{
-    padding: 75px 0 0 0;
+.container {
+  margin-top: -110px;
 }
 
-.bg {
-    background-color: #2e3238;
-}
-
-.left{
-    margin: 10px 0; 
-    text-align: right;
-}
-
-.right{
-    margin: 10px 0; 
-    text-align: left
+.top {
+  margin-top: 5vh;
 }
 
 h1 {
-    font-size: 50px; 
-    padding-right: 100px;
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-size: 50px;
+  padding-right: 100px;
+  font-family: "Raleway", serif;
 }
 
 hr {
-    background-color: white;
-    width: 75%;
+  width: 75%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: white;
 }
 
-.start {
-    width: 100%; 
-    font-size: 20px; 
-    margin: 50px 0;
-    background-color: #414d5e;
-    border-color: #37414f;
+.InChCrStContinue {
+  font-size: 20px;
 }
 
-.btn-primary:hover {
-    background-color: #37414f !important;
+.signature {
+  padding-top: 20px;
 }
 
-.playlist {
-    width: 320px; 
-    font-size: 20px; 
-    margin: 15px 0;
-    background-color: #719192;
-    border-color: #445959;
+.right {
+  margin: 10px 0;
 }
 
-.btn-secondary:hover {
-    background-color: #445959 !important;
+.left {
+  margin: 10px 0;
 }
 
-.center {
+.space {
+  width: 5vw;
+}
+
+@media (max-width: 415px) {
+  .container {
+    margin-top: -75px;
+  }
+  .top {
+    margin-top: 0;
+  }
+  h1 {
+    font-size: 20px;
+    padding: 0;
+    margin: 10px;
     text-align: center;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
+  }
+  .col-6 {
+    max-width: 100%;
+  }
+  .left {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  .right {
+    text-align: center;
+    margin: 0;
+  }
+  .playlist {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  br {
+    height: 0%;
+  }
+  .InChCrStContinue {
+    font-size: 3vw;
+    padding: 15px 0;
+    margin-top: 2px;
+  }
+  .signature {
+    padding: 5px 0 60px 0;
+    font-size: 12px;
+  }
 }

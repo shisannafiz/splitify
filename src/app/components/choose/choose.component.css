@@ -1,44 +1,49 @@
-.bg {
-    background-color: #2e3238;
+.container {
+  margin-top: -110px;
 }
 
-.container {    
-    padding: 20px 0;
- }
- 
- .headline {
-     margin: 50px 0;
-     font-family: 'IBM Plex Sans Condensed', sans-serif;
- }
- 
- .continue {
-     width: 100%; 
-     font-size: 20px; 
-     padding: 5px 0;
-     background-color: #414d5e;
-     border-color: #37414f;
- }
- 
- .btn-primary:hover {
-     background-color: #37414f !important;
- }
- 
- .playlist {
-     width: 320px; 
-     font-size: 20px; 
-     margin: 15px 0;
-     background-color: #719192;
-     border-color: #445959;
- }
- 
- .btn-secondary:hover {
-     background-color: #445959 !important;
- }
- 
- .center {
-     text-align: center;
-     align-items: center; 
-     justify-content: center;
- }
- 
- 
+.InChCrStContinue {
+  font-size: 20px;
+}
+
+.SeChCrStPlaylist:active {
+  font-weight: bold;
+  background-color: #3e6768;
+}
+
+.space {
+  width: 5vw;
+}
+
+.ripple {
+  background-position: center;
+  transition: background 0.5s;
+}
+
+.ripple:hover {
+  background: var(#000000)
+    radial-gradient(circle, transparent 1%, var(#ffffff) 1%) center/15000%;
+}
+
+.ripple:focus {
+  background-color: var(#555555);
+  background-size: 100%;
+  transition: background 0s;
+}
+
+@media (max-width: 415px) {
+  .container {
+    margin-top: -75px;
+  }
+  .InChCrStContinue {
+    font-size: 3vw;
+    padding: 15px 0;
+    margin-top: 2px;
+  }
+  .signature {
+    padding-top: 20px;
+  }
+  .sn {
+    font-size: 12px;
+  }
+}

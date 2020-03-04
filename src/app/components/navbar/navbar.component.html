@@ -1,25 +1,77 @@
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg">
-  <i class="material-icons">layers</i>
-  <a class="navbar-brand name" routerLink="/">Splitify</a> 
+  <div class="row navbar navbar-dark nopad ">
 
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item font">
-        <a class="nav-link font" routerLink="/select" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Select</a>
-      </li>
-      <li class="nav-item font">
-        <a class="nav-link font" routerLink="/create" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Create</a>
-      </li>
-      <li class="nav-item font">
-        <a class="nav-link font" routerLink="/choose" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Choose</a>
-      </li>
-      <li class="nav-item font">
-        <a class="nav-link font" routerLink="/start" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Start</a>
-      </li>
-      <li class="nav-item font">
-          <a class="nav-link font" routerLink="/login" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Login</a>
-        </li>
-    </ul>
+    <div class="col-3" >
+      <div class="brand">
+        <i class="logo material-icons">filter_hdr</i>
+        <a class="navbar-brand name" routerLink="/start">Splitify</a> 
+      </div>
+    </div>
+
+    <div class="col-3 mobile">
+      <div class="info navbar-nav">
+        <div class="line nav-item font">
+          <h1 class="user logout">{{user}}</h1>
+          <a class="nav-link font logout" 
+          [ngClass]="{'disabled': logout === false}" style="float: right;"
+          routerLink="/" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Log Out</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-6">
+      <div class="navbar-nav center">
+        <div class="nav-item font" >
+
+          <a class="nav-link font" 
+          [ngClass]="{'disabled': select === false}" 
+          routerLink="/select" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Select</a>
+
+          <i class="arrow material-icons" 
+          [ngStyle]="{'color' : (select === true) ? '#62a0a1' : 'grey'}">keyboard_arrow_right</i>
+
+          <a class="nav-link font" 
+          [ngClass]="{'disabled': create === false}"
+          routerLink="/create" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Create</a>
+
+          <div class="slash nav-link font">/</div>
+
+          <a class="nav-link font" 
+          [ngClass]="{'disabled': choose === false}" 
+          routerLink="/choose" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Choose</a>
+
+          <i class="arrow material-icons" 
+          [ngStyle]="{'color' : (confirm === true) ? '#62a0a1' : 'grey'}">keyboard_arrow_right</i>
+
+          <a class="nav-link font" 
+          [ngClass]="{'disabled': confirm === false}" 
+          routerLink="/confirm" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Confirm</a>
+
+          <i class="arrow material-icons" 
+          [ngStyle]="{'color' : (home === true) ? '#62a0a1' : 'grey'}">keyboard_arrow_right</i>
+
+          <a class="nav-link font" 
+          [ngClass]="{'disabled': home === false}" 
+          routerLink="/home" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Click</a>
+
+          <i class="arrow material-icons" 
+          [ngStyle]="{'color' : (review === true) ? '#62a0a1' : 'grey'}">keyboard_arrow_right</i>
+
+          <a class="nav-link font" 
+          [ngClass]="{'disabled': review === false}" 
+          routerLink="/review" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Review</a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="desktop col-3">
+      <div class="info navbar-nav">
+        <div class="line nav-item font">
+          <h1 class="user logout">{{user}}</h1>
+          <a class="nav-link font logout" 
+          [ngClass]="{'disabled': logout === false}" style="float: right;" (click)="exit()"
+          routerLink="/" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Log Out</a>
+        </div>
+      </div>
+    </div>
   </div>
-</nav>
-

@@ -1,42 +1,79 @@
-<div class="bg">
-	<div class="container">
-		<div class="row ">
-			<div class="col-12 headline">
-				<div class="row">
-					<div class="col-2"></div>
-					<h1>Select </h1>
-				</div>
-				<div class="row">
-					<div class="col-2"></div>
-					<p class="col-10">Select a master playlist to split up into specific playlists</p>
-        </div>
-        	
-				<div class="row">
-					<div class="col-2"></div>
-					<h1 class="col-10">Create or Choose</h1>
+<app-navbar></app-navbar>
+<div class="background">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="row center">
+          <div class="cont">
+            <h1>
+              <span class="splitify">Splitify</span> is a way to organize music
+              by adding songs from one playlist to many playlists based on the
+              feeling a song gives
+            </h1>
+          </div>
         </div>
         <div class="row">
-					<div class="col-2"></div>
-					<p class="col-10">Create new playlists or choose old playlists to split master playlist into</p>
+          <h2 class="col-2 right">1</h2>
+          <h2 class="col-10">Select</h2>
         </div>
-				<!-- <div class="row">
-					<div class="col-2"></div>
-					<h1>Create</h1><p> new playlists or</p> <h1>choose</h1><p>old playlists to split the master playlist into</p>
-				</div> -->
-				<div class="row">
-					<div class="col-2"></div>
-					<h1 class="col-10">Split</h1>
-				</div>
-				<div class="row">
-					<div class="col-2"></div>
-					<p class="col-10">Pick playlists to add current playing song to</p>
+        <div class="row">
+          <div class="col-2"></div>
+          <p class="col-10">
+            Select the main playlist with the music to split up
+          </p>
         </div>
-        <div class="col-12 headline">
-					<div class="row center">
-						<button class="start btn btn-primary col-3" routerLink="/select">Start</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="row">
+          <h2 class="col-2 right">2</h2>
+          <h2 class="col-10">Create or Choose</h2>
+        </div>
+        <div class="row">
+          <div class="col-2"></div>
+          <p class="col-10">
+            Create new playlists or choose old playlists to split into
+          </p>
+        </div>
+        <div class="row">
+          <h2 class="col-2 right">3</h2>
+          <h2 class="col-10">Confirm</h2>
+        </div>
+        <div class="row">
+          <div class="col-2"></div>
+          <p class="col-10">
+            Confirm the selected and created/chosen playlists
+          </p>
+        </div>
+        <div class="row">
+          <h2 class="col-2 right">4</h2>
+          <h2 class="col-10">Click</h2>
+        </div>
+        <div class="row">
+          <div class="col-2"></div>
+          <p class="col-10">
+            Click on a playlist to add the current playing song to it
+          </p>
+        </div>
+        <div class="row">
+          <h2 class="col-2 right">5</h2>
+          <h2 class="col-10">Review</h2>
+        </div>
+        <div class="row">
+          <div class="col-2"></div>
+          <p class="col-10">Review the updated playlists and remove tracks</p>
+        </div>
+        <div class="col-12">
+          <div class="row center">
+            <button class="InChCrStContinue btn col-3" routerLink="/select">
+              Start
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="signature footer">
+      <div class="container">
+        <h6 class="sn text-muted">Created by Shisan Nafiz</h6>
+        <img class="cheese" src="../../../assets/cheese-512.png" />
+      </div>
+    </footer>
+  </div>
 </div>

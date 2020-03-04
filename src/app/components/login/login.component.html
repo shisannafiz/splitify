@@ -1,30 +1,16 @@
-<div class="bg">
-  <div class="container bg" style="padding: 200px 0">
-    <div class="row" style="text-align: center">
-      <div class="col-md-12" style="margin: 40px 0">
-        <h1 style="font-size: 100px">Splitify</h1>
+<div class="background">
+    <div class="row center">
+      <div class="col-12 top">
+        <i class="material-icons">filter_hdr</i>
+        <h1 class="name">Splitify</h1>
       </div>
-    </div>
-    <div class="row" style="text-align: center">
-      <div class="col text-center" style="text-align: center">
-        <form style="text-align: center">
-            <div class="form-group" style="text-align: center">
-                <input type="text" name="username" class="form-control center" placeholder="Username"
-                [(ngModel)]="user" style="width: 200px; margin: auto">
-            </div>
-            <div class="form-group" style="text-align: center">
-                <input type="text" name="password" class="form-control center" placeholder="Password"
-               [(ngModel)]="pass" style="width: 200px; margin: auto">
-            </div>
-            <button type="button" class="btn btn-primary" (click)="get()">Log In</button>
-        </form> 
-      </div>
-    </div>
-    
-    <div *ngFor="let playlist of playlists">
-      <h1>{{playlist}}</h1>
-    </div>
   </div>
+  <div class="row center">
+    <button class="login btn" (click)="login()">Log In</button>
+  </div>
+  <div class="signature footer">
+    <h6 class="sn text-muted">Created by Shisan Nafiz</h6>
+    <img class="cheese" src="../../../assets/cheese-512.png">
+  </div>
+
 </div>
-
-

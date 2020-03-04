@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpotifyService } from '../../services/spotify.service';
 import { Playlist } from '../../models/playlist';
-import { Track } from '../../models/track';
 
 @Component({
   selector: 'app-select',
@@ -27,6 +26,7 @@ export class SelectComponent implements OnInit {
   }
 
   setPlaylistInfo(){
+    this.spotserv.setSelected();
     this.spotserv.setID(this.playlistID);
     this.spotserv.setName(this.playlistName);
   }

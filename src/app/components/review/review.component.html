@@ -1,0 +1,83 @@
+<app-navbar></app-navbar>
+<div class="background">
+  <div class="container">
+    <div class="row">
+      <div class="col-8" style="padding-left: 0;">
+        <h1>Review Playlists</h1>
+      </div>
+      <div class="desktop col-4">
+        <div class="filter btn" (click)="sortArtists()"  [ngStyle]="{'color': artistColor}">Artist</div>
+        <div class="filter btn" (click)="sortTitles()" [ngStyle]="{'color': titleColor}">Title</div>
+        <div class="sortby btn disabled">Sort by</div>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="desktop col-4 playlists">
+        <div *ngFor="let playlist of playlists" class="row">
+          <div class="col-12">
+            <button class="btn playlist" (click)="showTracks($click, playlist.id, playlist.name)">{{playlist.name}}</button>
+          </div>
+        </div>
+      </div>   
+
+      <div class="mobile col-4 playlists">
+        <div *ngFor="let playlist of playlists" class="row">
+          <div class="col-12">
+            <button class="btn playlist" (click)="showTracks($click, playlist.id, playlist.name)">{{playlist.name}}</button>
+          </div>
+        </div>
+      </div>   
+
+      <div class="sort col-12">  
+        <h2>{{playlistName}}</h2>
+        <div class="filter btn" (click)="sortArtists()" [ngStyle]="{'color': artistColor}">Artist</div>
+        <div class="filter btn" (click)="sortTitles()" [ngStyle]="{'color': titleColor}">Title</div> 
+        <div class="sortby btn disabled">Sort by</div>     
+      </div>
+
+      <div class="tracks col-8">
+        <div *ngFor="let playlist of playlists">
+          <div *ngIf="playlist.id === playlistID">
+            <div *ngIf="!titleOrder && !artistOrder">
+              <ul class="list-group list-group-flush" *ngFor="let track of tracks">
+                <li class="list-group-item" [ngStyle]="{'border-color' : (track.name === name && track.artists[0].name === artist) ? 'white' : '#444', 'border-top-width' : (track.name === name && track.artists[0].name === artist) ? 'thin' : 'none', 'border-bottom-width' : (track.name === name && track.artists[0].name === artist) ? 'thin' : 'none'}" (click)="playPreview(track.preview_url, track.name, track.artists[0].name)" >
+                  <img class="cover" src="{{track.album.images[0].url}}">
+                  <i class="trash material-icons" (click)="removeTrack(track.uri, track.name)">delete</i>
+                  <h3 [ngStyle]="{'font-weight' : (track.name === name && track.artists[0].name === artist) ? 'bold' : 'normal' }">{{track.name}}</h3> 
+                  <h4 [ngStyle]="{'font-weight' : (track.name === name && track.artists[0].name === artist) ? 'bold' : 'normal' }">{{track.artists[0].name}}</h4>
+                </li>
+              </ul>  
+            </div>
+            <div *ngIf="titleOrder">
+              <ul class="list-group list-group-flush" *ngFor="let track of titles">
+                <li class="list-group-item" [ngStyle]="{'border-color' : (track.name === name && track.artists[0].name === artist) ? 'white' : '#444', 'border-top-width' : (track.name === name && track.artists[0].name === artist) ? 'thin' : 'none', 'border-bottom-width' : (track.name === name && track.artists[0].name === artist) ? 'thin' : 'none'}" (click)="playPreview(track.preview_url, track.name, track.artists[0].name)" >
+                  <img class="cover" src="{{track.album.images[0].url}}">
+                  <i class="trash material-icons" (click)="removeTrack(track.uri, track.name)">delete</i>
+                  <h3 [ngStyle]="{'font-weight' : (track.name === name && track.artists[0].name === artist) ? 'bold' : 'normal' }">{{track.name}}</h3> 
+                  <h4 [ngStyle]="{'font-weight' : (track.name === name && track.artists[0].name === artist) ? 'bold' : 'normal' }">{{track.artists[0].name}}</h4>
+                </li>
+              </ul>  
+            </div>
+            <div *ngIf="artistOrder">
+              <ul class="list-group list-group-flush" *ngFor="let track of artists">
+                <li class="list-group-item" [ngStyle]="{'border-color' : (track.name === name && track.artists[0].name === artist) ? 'white' : '#444', 'border-top-width' : (track.name === name && track.artists[0].name === artist) ? 'thin' : 'none', 'border-bottom-width' : (track.name === name && track.artists[0].name === artist) ? 'thin' : 'none'}" (click)="playPreview(track.preview_url, track.name, track.artists[0].name)" >
+                  <img class="cover" src="{{track.album.images[0].url}}">
+                  <i class="trash material-icons" (click)="removeTrack(track.uri, track.name)">delete</i>
+                  <h3 [ngStyle]="{'font-weight' : (track.name === name && track.artists[0].name === artist) ? 'bold' : 'normal' }">{{track.name}}</h3> 
+                  <h4 [ngStyle]="{'font-weight' : (track.name === name && track.artists[0].name === artist) ? 'bold' : 'normal' }">{{track.artists[0].name}}</h4>
+                </li>
+              </ul> 
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="signature footer">
+      <h6 class="sn text-muted">Created by Shisan Nafiz</h6>
+      <img class="cheese" src="../../../assets/cheese-512.png">
+    </div>
+  </div>
+</div>

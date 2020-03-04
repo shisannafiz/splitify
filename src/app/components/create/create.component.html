@@ -1,28 +1,31 @@
-<div class="bg">
-	<div class="container bg">
-		<div class="row center">
-				<div class="col-12 headline">
-					<div class="row">
-						<h1 class="col-7">Create playlists to split into</h1>
-						<button *ngIf="count" class="continue btn btn-primary col-3" (click)="setCount()" routerLink="/start">Continue</button>
-					</div>
-				</div>
-			</div>
-		<div class="row center" style="margin: 15px 0"> 
-      <div class="col-3">
-          <input [(ngModel)]="name" type="text" class="form-control" name="name" placeholder="Enter a name.." style="width: 100%">
+<app-navbar></app-navbar>
+<div class="background">
+	<div class="container center">
+    <div class="headline col-12">
+      <div class="row">
+        <h1 class="SeChCrH1 col-7">Create playlists to split into</h1>
+        <div class="space"></div>
+        <button class="InChCrStContinue btn col-3" *ngIf="count" routerLink="/confirm" (click)="setCount()">Continue</button>
       </div>
-      <div class="col-1 center">
-        <button (click)='createPlaylist()' class="btn btn-light add"><i class="material-icons icon center">add</i>
-        </button>
+    </div>
+		<div class="row center"> 
+      <div class="col-4 textbox">
+          <input class="input form-control" [(ngModel)]="name" type="text" placeholder="Enter a name..">
+      </div>
+      <div class="col-1 add">
+        <button class="plus btn ripple" (click)="createPlaylist()"><i class="icon material-icons">add</i></button>
       </div>
 		</div>
-		<div class="row center"> 
+		<div class="col-12 center playlists"> 
 			<div *ngFor="let playlist of playlists">
-				<div class="col-12 center">
-					<button (click)="getPlaylistID($click, playlist.id, playlist.name)" class="playlist btn btn-secondary">{{playlist.name}}</button>
+				<div class="row center">
+					<button class="SeChCrStPlaylist btn" (click)="getPlaylistID($click, playlist.id, playlist.name)">{{playlist.name}}</button>
 				</div>
-			</div>
+      </div>
+    </div>
+    <div class="signature footer">
+      <h6 class="text-muted sn">Created by Shisan Nafiz</h6>
+      <img class="cheese" src="../../../assets/cheese-512.png">
     </div>
 	</div>
 </div>

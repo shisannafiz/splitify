@@ -1,105 +1,329 @@
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-  }
+.cont {
+  padding-left: 15px;
+  padding-right: 20px;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.playlist,
+.done {
+  font-family: "Raleway", serif;
+}
+
+h1 {
+  font-size: 1.5vw;
+  font-weight: bold;
+  padding: 15px;
+  margin-top: 10vh;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 1vw;
+  padding: 15px;
+  margin-bottom: 0;
+  color: #b3b3b3;
+}
 
 h3 {
-    padding: 65px 0 20px 0; 
-    margin-bottom: 0; 
-    font-size: 1.2vw; 
-    font-weight: bolder;
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-size: 0.8vw;
+  font-weight: bold;
+  padding: 40px 20px 20px 0;
+  margin-bottom: 0;
 }
 
 h4 {
-    padding: 15px;
-    margin-bottom: 0;
-    font-size: 2vw;
-    font-weight: bold;
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-size: 0.8vw;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+  display: inline-block;
+  color: #b3b3b3;
 }
 
 h5 {
-    color: #b3b3b3;
-    padding: 15px;
-    margin-bottom: 0;
-    font-size: 1.3vw;
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
-}
-
-.information {
-    padding: 10px 40px 0 40px;
-    margin-right: 0px;
-}
-
-.info {
-    padding: 20px;
+  font-size: 0.8vw;
+  text-align: left;
+  display: inline-block;
 }
 
 .player {
-    background-color: #2e3238;
-    padding-top: 20px;
+  padding-top: 20px;
+  padding-right: 0;
+  padding-left: 50px;
 }
 
-.controls {
-    padding: 40px 0 0 0;
-}
-
-.playlists {
-    background-color: #2e3238;
-
-}
-
-.btn-secondary:hover {
-    background-color: #465a5b;
-}
-
-.accent{
-    background-color: #719192;
+.cover {
+  padding-top: 10px;
+  width: 92.5%;
 }
 
 .left {
-    text-align: left;
-}
-
-.right {
-    text-align: right;
-}
-
-.center {
-    text-align: center;
-    align-items: center; 
-    justify-content: center;
-}
-
-.icon {
-    font-size: 45px;
-}
-
-.lefticons {
-    padding: 3px 20px;
+  padding-right: 0;
 }
 
 .seeker {
-    padding: 18px 0;
+  padding: 20px 25px 20px 0;
+  margin-right: 50px;
 }
 
-.righticons {
-    padding: 3px 20px;
+.progress {
+  height: 25px;
+  margin-left: 15px;
+  background-color: #181c22;
 }
 
-.playlist {
-    width:90%; 
-    font-size: 1.5vw; 
-    margin: 12px 0; 
-    padding: 12px 0; 
-    font-weight: 400;
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
+.controls {
+  display: flex;
+  padding-top: 35px;
+  padding-left: 0;
+}
+
+.rew {
+  font-size: 65px;
+}
+
+.pp {
+  font-size: 90px;
+  padding-left: 30px;
+  padding-right: 27px;
+}
+
+.skip {
+  font-size: 75px;
+}
+
+.playlists {
 }
 
 .scrollable {
-    overflow-y: auto;
-    height: 70vh;
+  overflow-y: auto;
+  height: 40vh;
+}
+
+.playlist {
+  font-size: 1.2vw;
+  width: 85%;
+  margin: 12px 0;
+  padding: 10px 0;
+  font-weight: 400;
+  background-color: #62a0a1;
+  border-color: #445959;
+}
+
+.playlist:hover {
+  background-color: #4e8182;
+}
+
+.playlist:active {
+  background-color: #3e6768;
+}
+
+.done {
+  font-size: 1.2vw;
+  width: 70%;
+  padding: 10px 0;
+  margin: 10px 20px 36px 0;
+  background-color: #8b1515;
+  border-color: #6f1111;
+}
+
+.done:hover {
+  background-color: #6f1111;
+}
+
+.done:focus {
+  background-color: #590e0e;
+}
+
+.signature {
+  padding-left: 20px;
+}
+
+.sn {
+  font-size: 17px;
+}
+
+.cheese {
+  height: 30px;
+  width: 30px;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 1400px) {
+  .rew {
+    font-size: 40px;
+  }
+  .pp {
+    font-size: 65px;
+    padding-left: 20px;
+    padding-right: 17px;
+  }
+  .skip {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .rew {
+    font-size: 15px;
+  }
+  .pp {
+    font-size: 40px;
+    padding-left: 20px;
+    padding-right: 17px;
+  }
+  .skip {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 10px;
+  }
+  h2 {
+    font-size: 10px;
+  }
+  h3 {
+    font-size: 2vw;
+    padding-top: 20px;
+  }
+  h4 {
+    font-size: 4vw;
+    font-weight: 800;
+    padding-top: 15px;
+    padding-bottom: 5px;
+  }
+  h5 {
+    font-size: 2vw;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .left {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 415px) {
+  .col-2,
+  .col-4,
+  .col-6 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  h1 {
+    font-size: 18px;
+    font-weight: 800;
+    padding: 15px 0 4px 19px;
+    margin-top: 0;
+  }
+  h2 {
+    font-size: 12px;
+    padding: 5px 0 5px 19px;
+  }
+  h3 {
+    font-size: 12px;
+    padding-top: 17px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+  }
+  h4,
+  h5 {
+    font-size: 11px;
+  }
+  h5 {
+    font-weight: bold;
+  }
+  .player {
+    padding-top: 0;
+    padding-left: 15px;
+    /* padding-left: 0; */
+  }
+  .media {
+    padding-left: 18px;
+    padding-right: 36px;
+  }
+  .cover {
+    width: 100%;
+    padding-top: 0;
+  }
+  .left {
+    padding-left: 0;
+  }
+  .seeker {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .progress {
+    width: 93%;
+    height: 11px;
+    margin-left: 4px;
+  }
+  .icons {
+    display: flex;
+    padding: 10px 10px 0 0;
+  }
+  .rew {
+    font-size: 45px;
+  }
+  .pp {
+    font-size: 70px;
+    padding-left: 30px;
+    padding-right: 27px;
+  }
+  .skip {
+    font-size: 50px;
+  }
+  .playlists {
+  }
+  .scrollable {
+    height: auto;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .playlist {
+    width: 97%;
+    margin: 10px 0;
+    font-size: 4vw;
+    padding: 8px 0;
+  }
+  .done {
+    width: 85%;
+    margin: 30px 0 10px 0;
+    font-size: 4vw;
+    padding: 8px 0;
+  }
+  .signature {
+    font-size: 10px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+  .signature {
+    padding-left: 0;
+  }
+  .sn {
+    font-size: 12px;
+  }
+  .cheese {
+    height: 21px;
+    width: 21px;
+  }
+  .mobile {
+    display: flex;
+  }
+  .desktop {
+    display: none;
+  }
+  .nopad {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }

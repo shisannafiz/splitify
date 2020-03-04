@@ -1,21 +1,28 @@
-<div class="bg">
-  <div class="container bg">
-      <div class="row center">
-        <div class="col-12 headline">
-          <div class="row">
-            <h1 class="col-6">Select a playlist to split</h1>
-            <button *ngIf="playlistID" class="continue btn btn-primary col-2" (click)="setPlaylistInfo()" routerLink="/create">Create Playlists</button>
-            <div class="space"></div>
-            <button *ngIf="playlistID" class="continue btn btn-primary col-2" (click)="setPlaylistInfo()" routerLink="/choose">Choose Playlists</button>
-          </div>
-        </div>
-      </div>    
+<app-navbar></app-navbar>
+<div class="background">
+  <div class="container center">
+
+    <div class="headline col-12">
+      <div class="row">
+        <h1 class="SeChCrH1 col-6">Select a playlist to split</h1> 
+        <div class="space"></div>
+        <button class="InChCrStContinue btn col-2" *ngIf="playlistID" routerLink="/create" (click)="setPlaylistInfo()">Create Playlists</button>
+        <div class="space"></div>
+        <button class="InChCrStContinue btn col-2" *ngIf="playlistID" routerLink="/choose" (click)="setPlaylistInfo()">Choose Playlists</button>
+      </div>
+    </div>
+    
     <div class="row center"> 
       <div *ngFor="let playlist of playlists">
         <div class="col-12 center">
-          <button (click)="getPlaylistInfo($click, playlist.id, playlist.name)" class="playlist btn btn-secondary">{{playlist.name}}</button>
+          <button class="SeChCrStPlaylist btn " (click)="getPlaylistInfo($click, playlist.id, playlist.name)">{{playlist.name}}</button>
         </div>
       </div>
+    </div>
+
+    <div class="signature footer">
+      <h6 class="sn text-muted">Created by Shisan Nafiz</h6>
+      <img class="cheese" src="../../../assets/cheese-512.png">
     </div>
   </div> 
 </div>

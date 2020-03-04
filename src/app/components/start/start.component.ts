@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { Playlist } from 'src/app/models/playlist';
-import { SpotifyService } from 'src/app/services/spotify.service';
+import { Component, OnInit } from "@angular/core";
+import { Playlist } from "src/app/models/playlist";
+import { SpotifyService } from "src/app/services/spotify.service";
 
 @Component({
-  selector: 'app-start',
-  templateUrl: './start.component.html',
-  styleUrls: ['./start.component.css']
+  selector: "app-start",
+  templateUrl: "./start.component.html",
+  styleUrls: ["./start.component.css"]
 })
 export class StartComponent implements OnInit {
   master: string;
@@ -13,31 +13,33 @@ export class StartComponent implements OnInit {
   created: boolean = false;
   chosen: boolean = false;
 
-  constructor(private spotserv: SpotifyService) { }
+  constructor(private spotserv: SpotifyService) {}
 
   ngOnInit() {
     this.master = this.spotserv.getName();
-    // if(this.created){
-    //   this.getNewPlaylists();
-    // } else if (this.chosen){
-    //   this.getChosenPlaylists();
-    // } else {
-    //   alert("Error");
-    // }
-    this.getChosenPlaylists();
+    if (this.spotserv.getCreated()) {
+      this.getNewPlaylists();
+    } else if (this.spotserv.getChosen()) {
+      this.getChosenPlaylists();
+    } else {
+    }
   }
 
-  getNewPlaylists(){
+  getNewPlaylists() {
     this.spotserv.getNewPlaylists().subscribe((res: any) => {
       this.playlists = res.items;
     });
   }
-  
-  getChosenPlaylists(){
+
+  getChosenPlaylists() {
     this.spotserv.getChosenPlaylistsIDs().forEach(id => {
-      this.spotserv.getPlaylist(id).subscribe((res:any) => {
+      this.spotserv.getPlaylist(id).subscribe((res: any) => {
         this.playlists.push(res);
-      }) 
-    })
+      });
+    });
+  }
+
+  start() {
+    this.spotserv.setConfirmed();
   }
 }

@@ -1,33 +1,37 @@
-<div class="bg"> 
-	<div class="container">
-		<div class="row center">
-			<div class="col-md-6 left">
-				<h1>Split</h1>
-			</div>
-			<div class="col-md-6 right"> 
-				<button type="button" class="playlist btn btn-secondary">{{master}}</button>        
+<app-navbar></app-navbar>
+<div class="background"> 
+	<div class="container center">
+		<div class="headline col-12">
+			<div class="row">
+				<h2 class="SeChCrH1 col-7">Confirm the playlists</h2>
+				<div class="space"></div>
+				<button class="InChCrStContinue btn col-3" routerLink="/home" (click)="start()">Start</button>
 			</div>
 		</div>
-		<br>
-		<hr class="center">
-		<br>
-		<div class="row center">
-			<div class="col-md-6 left">
-					<h1>into</h1>
+    
+		<div class="row center top">
+			<div class="col-6 right">
+				<h1>Split</h1>
 			</div>
+			<div class="col-6 left"> 
+				<div class="SeChCrStPlaylist btn">{{master}}</div>        
+			</div>
+		</div>
+		<hr class="center">
+		<div class="row center">
 			<div class="col-md-6 right">
+				<h1>into</h1>
+			</div>
+			<div class="col-6 left">
 				<div *ngFor="let playlist of playlists">
-						<button class="playlist btn btn-secondary">{{playlist.name}}</button>
+					<div class="SeChCrStPlaylist btn">{{playlist.name}}</div>
 				</div> 
 			</div>
 		</div>
-		<div class="row center">
-				<div class="col-12 headline">
-					<div class="row center">
-						<button class="start btn btn-primary col-3" routerLink="/home">Start</button>
-					</div>
-				</div>
-			</div>
 		<br>
+  </div>
+  <div class="signature footer">
+    <h6 class="sn text-muted">Created by Shisan Nafiz</h6>
+    <img class="cheese" src="../../../assets/cheese-512.png">
   </div>
 </div>
